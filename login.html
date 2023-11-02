@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <style>
+        body {
+            background-color: #333;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #222;
+            color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .login-container h1 {
+            color: #00FF00;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            background-color: #444;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .login-container .remember-me {
+            text-align: left;
+            color: #00FF00;
+        }
+
+        .login-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            background: linear-gradient(to bottom, #00FF00 0%, #009900 100%);
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .login-container input[type="submit"]:hover {
+            background: linear-gradient(to bottom, #009900 0%, #00FF00 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Usuário" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <label class="remember-me">
+                <input type="checkbox" id="rememberMe"> Lembrar de Mim
+            </label>
+            <input type="submit" value="Entrar">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const rememberMe = document.getElementById("rememberMe").checked;
+
+            // Lógica de autenticação (substitua essas credenciais por suas próprias).
+            if (username === "seu_usuario" && password === "sua_senha") {
+                if (rememberMe) {
+                    // Implemente o armazenamento da sessão do usuário, se necessário.
+                }
+                window.location.href = "estoque.html";
+            } else {
+                alert("Nome de usuário ou senha incorretos. Tente novamente.");
+            }
+        });
+    </script>
+</body>
+</html>

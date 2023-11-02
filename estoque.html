@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Estoque</title>
+    <style>
+        body {
+            background-color: #ccc;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+
+        .header {
+            background-color: #0073e6;
+            color: #fff;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .estoque-container {
+            background-color: #fff;
+            color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .estoque-container h1 {
+            color: #0073e6;
+        }
+
+        .produto {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .produto h3 {
+            color: #333;
+        }
+
+        .produto p {
+            color: #666;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .editar-button,
+        .excluir-button {
+            background: linear-gradient(to bottom, #0073e6 0%, #005bb7 100%);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .editar-button:hover,
+        .excluir-button:hover {
+            background: linear-gradient(to bottom, #005bb7 0%, #0073e6 100%);
+        }
+
+        .voltar-button {
+            background: linear-gradient(to bottom, #ff9900 0%, #cc6600 100%);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .voltar-button:hover {
+            background: linear-gradient(to bottom, #cc6600 0%, #ff9900 100%);
+        }
+
+        .valor-total {
+            color: #333;
+            font-size: 20px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Página de Estoque</h1>
+    </div>
+
+    <div class="estoque-container">
+        <h1>Lista de Produtos</h1>
+        <div class="produto">
+            <h3>Produto 1</h3>
+            <p>Descrição do Produto 1</p>
+            <p>Preço: $50</p>
+            <div class="options">
+                <button class="editar-button">Editar</button>
+                <button class="excluir-button">Excluir</button>
+            </div>
+        </div>
+        <div class="produto">
+            <h3>Produto 2</h3>
+            <p>Descrição do Produto 2</p>
+            <p>Preço: $40</p>
+            <div class="options">
+                <button class="editar-button">Editar</button>
+                <button class="excluir-button">Excluir</button>
+            </div>
+        </div>
+        <!-- Adicione mais produtos conforme necessário -->
+    </div>
+
+    <div class="estoque-container">
+        <h1>Adicionar Novo Produto</h1>
+        <form id="adicionar-produto-form">
+            <input type="text" placeholder="Nome do Produto" required>
+            <input type="text" placeholder="Descrição" required>
+            <input type="number" placeholder="Preço" required>
+            <button class="editar-button" type="submit">Adicionar</button>
+        </form>
+    </div>
+
+    <div class="estoque-container">
+        <div class="valor-total">
+            Valor Total do Estoque: $90
+        </div>
+    </div>
+
+    <button class="voltar-button" onclick="voltar()">Voltar para o Login</button>
+
+    <script>
+        function voltar() {
+            // Implemente a lógica para voltar para a página de login.
+            window.location.href = "login.html";
+        }
+        // Aqui você pode adicionar a lógica para editar, excluir e adicionar produtos.
+        // Por exemplo, adicionar manipuladores de eventos para os botões de edição, exclusão e envio do formulário.
+    </script>
+</body>
+</html>
